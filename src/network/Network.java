@@ -8,7 +8,6 @@ package network;
  *
  */
 
-	import java.util.Collection;
 	import java.util.HashMap;
 	import java.util.Iterator;
 	import java.util.List;
@@ -32,20 +31,13 @@ package network;
 		public static Person getProfile(String name) {
 
 			if (profile.containsKey(name)) {
-				Set<Entry<String, Person>> entires = profile.entrySet();
-				
-				for (Entry<String, Person> ent : entires) {
-//					System.out.println(ent.getKey() + " ==> " + ent.getValue());
-//					System.out.println(person.toString());
-					
-					return ent.setValue(person);
-
+				return profile.get(name);
 				}
-
-			}
 			return null;
+			}
+			
 
-		}
+		
 
 	/*
 	 * Print out All people in the Map
@@ -54,7 +46,7 @@ package network;
 		public void listEveryone() {
 
 			for (String keys : profile.keySet()) {
-				System.out.println(keys + ":" + profile.get(keys));
+				System.out.println( profile.get(keys));
 			}
 		}
 			/*

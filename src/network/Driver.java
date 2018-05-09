@@ -9,8 +9,6 @@ package network;
  */
 
 	
-
-
 	import java.util.HashMap;
 	import java.util.Scanner;
 
@@ -38,18 +36,20 @@ package network;
 
 			int age = Utility.readInt("Enter your age : ", 0, 150);
 			if (!Utility.isAdult(age)) {
+				Dependent person1=null;
 				String father = Utility.readString("Please enter your father's name : ");
 				Person fatherPro = Network.getProfile(father);
 				String mother = Utility.readString("Please enter your mother's name : ");
 				Person motherPro = Network.getProfile(mother);
 				if (motherPro != null && fatherPro != null)
 					person = new Dependent(name, age, gender,fatherPro, motherPro);
-				
+											
 			} else 
+			
 				person = new Adult(name, age, gender);
 						
 			network.addPerson(person);
-
+			
 		}
 
 		/*

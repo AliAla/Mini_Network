@@ -17,8 +17,7 @@ public class Dependent extends Person {
 		super(name, age, gender);
 		this.father= father;
 		this.mother= mother;
-		System.out.println("zzzzzzzz");
-	//	if()
+		//	if()
 		// TODO Auto-generated constructor stub
 	}
 	private boolean isConnected(Person person1,Person person2)
@@ -27,4 +26,11 @@ public class Dependent extends Person {
 		return false;
 		
 	}
+	 @Override
+	    public String toString() 
+	    {
+	         
+	        return (super.toString()+
+	                "\nseat height is "+father.getName()+"//"+mother.getName());
+	    }
 }

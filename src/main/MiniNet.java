@@ -36,10 +36,10 @@ package main;
 						break;
 
 					case 4:
-						Person.hasConnection();
-						/*Network.getProfile(Utility.readString("Type the name"));
-						 * 
-						 */
+						//Person.hasConnection();
+						Network.getProfile(Utility.readString("Type the name"));
+						 
+						
 						break;
 					}
 					input = menu();
